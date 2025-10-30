@@ -1,0 +1,95 @@
+#include <iostream>
+#include <random>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    int answer;
+    int i = 1;
+    int g = 0;
+    int real_number;
+    int user_number;
+    cout << "[ Меню ]" << endl << "[1] Начать игру;" << endl << "[2] Выйти." << endl;
+    cin >> answer;
+    if (answer == 1)
+    {
+        real_number = rand();
+        while (real_number > 10 or real_number <= 0)
+        {
+            real_number = rand();
+        }
+        cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [5] " << endl << endl;
+        while (i <= 5)
+        {
+            cout << "[>] Угадать первое число : ";
+            cin >> user_number;
+            if (user_number == real_number)
+            {
+                cout << "[ + ] Вы угадали число!" << endl;
+                g = g + 1;
+                i = 1;
+                break;
+            }
+            else
+            {
+                cout << "[-] Вы не угадали число!" << endl;
+                cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [" << 5 - i << "] " << endl << endl;
+                i = i + 1;
+                
+            }
+        }
+        i = 1;
+        real_number = rand();
+        while (real_number > 10 or real_number <= 0)
+        {
+            real_number = rand();
+        }
+        cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [5] " << endl << endl;
+        while (i <= 5)
+        {
+            cout << "[>] Угадать второе число : ";
+            cin >> user_number;
+            if (user_number == real_number)
+            {
+                cout << "[ + ] Вы угадали число!" << endl;
+                g = g + 1;
+                i = 1;
+                break;
+            }
+            else
+            {
+                cout << "[-] Вы не угадали число!" << endl;
+                cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [" << 5 - i << "] " << endl << endl;
+                i = i + 1;
+                
+            }
+        }
+        i = 1;
+        real_number = rand();
+        cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [5] " << endl << endl;
+        while (real_number > 10 or real_number <= 0)
+        {
+            real_number = rand();
+        }
+        while (i <= 5)
+        {
+            cout << "[>] Угадать третье число : ";
+            cin >> user_number;
+            if (user_number == real_number)
+            {
+                cout << "[ + ] Вы угадали число!" << endl;
+                g = g + 1;
+                i = 1;
+                break;
+            }
+            else
+            {
+                cout << "[-] Вы не угадали число!" << endl;
+                cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << "[+] Попыток: [5] " << endl << endl;
+                i = i + 1;
+                
+            }
+        }
+        cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl;
+    }
+}
