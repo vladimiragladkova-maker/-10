@@ -23,6 +23,11 @@ int main() {
         {
             cout << "[>] Угадать первое число : ";
             cin >> user_number;
+            while (user_number < 1 or user_number > 10)
+            {
+                cout << "Ошибка: неверно введено число. Попробуйте еще раз: ";
+                cin >> user_number;
+            }
             if (user_number == real_number)
             {
                 cout << "[ + ] Вы угадали число!" << endl;
@@ -49,6 +54,11 @@ int main() {
         {
             cout << "[>] Угадать второе число : ";
             cin >> user_number;
+            while (user_number < 1 or user_number > 10)
+            {
+                cout << "Ошибка: неверно введено число. Попробуйте еще раз: ";
+                cin >> user_number;
+            }
             if (user_number == real_number)
             {
                 cout << "[ + ] Вы угадали число!" << endl;
@@ -75,6 +85,11 @@ int main() {
         {
             cout << "[>] Угадать третье число : ";
             cin >> user_number;
+            while (user_number < 1 or user_number > 10)
+            {
+                cout << "Ошибка: неверно введено число. Попробуйте еще раз: ";
+                cin >> user_number;
+            }
             if (user_number == real_number)
             {
                 cout << "[ + ] Вы угадали число!" << endl;
@@ -90,6 +105,22 @@ int main() {
                 
             }
         }
-        cout << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl;
+        cout << endl << "[ + ] Угаданных чисел: [ " << g << " / 3 ]" << endl << endl;
+        if (g==0)
+        {
+            cout << "Безнадежная ситуация" << endl;
+        }
+        else if (g == 3)
+        {
+            cout << "ПОБЕДА!!!" << endl;
+        }
+        else if (g==1)
+        {
+            cout << "Сносно" << endl;
+        }
+        else if (g == 2)
+        {
+            cout << "Неплохо" << endl;
+        }
     }
 }
